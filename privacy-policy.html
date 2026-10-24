@@ -14,58 +14,79 @@
 <body>
 
 <h1>Privacy Policy — Tiny Craft Factory</h1>
-<p><em>Last updated: 2026-09-26</em></p>
+<p><em>Last updated: 2026-10-24</em></p>
 
 <p>
 Tiny Craft Factory is a personal, single-user automation tool operated by
-its owner ("we", "the developer"). It generates short craft videos and
-publishes them to the developer's own social media accounts, including
-TikTok. This policy describes how it handles data when connecting to
-TikTok's API.
+its owner ("we", "the developer"). It produces short craft videos and
+schedules and publishes them to the developer's own social media
+accounts, including TikTok and YouTube, using a self-hosted copy of the
+open-source scheduling software Postiz running on the developer's own
+computer. This policy describes how it handles data when connecting to
+these platforms' APIs.
 </p>
 
 <h2>Who this applies to</h2>
 <p>
 This application is not a public service. It is used only by its owner,
-to publish the owner's own content to the owner's own TikTok account. It
-is not distributed to, or used by, the general public.
+to publish the owner's own content to the owner's own accounts. It is
+not distributed to, or used by, the general public, and no other user
+accounts are supported.
 </p>
 
 <h2>What data we access</h2>
 <p>
 When the owner authorizes this application via TikTok's OAuth login, the
-application receives an access token and refresh token scoped to the
-owner's own TikTok account, limited to permission to publish video
-content and read basic profile information (open ID). No data about any
-other TikTok user is accessed.
+application receives an access token and refresh token for the owner's
+own TikTok account. It uses them only to:
+</p>
+<ul>
+  <li>read basic profile information (open ID, display name and avatar);</li>
+  <li>read account statistics (such as follower and video counts) and the
+  list of the owner's own videos, to show the owner how their posts perform;</li>
+  <li>upload and publish videos that the owner has scheduled.</li>
+</ul>
+<p>
+When the owner connects YouTube, equivalent access to the owner's own
+YouTube channel is granted through Google's OAuth login and used in the
+same way. No data about any other TikTok or YouTube user is accessed.
 </p>
 
 <h2>Where data is stored</h2>
 <p>
-OAuth tokens are stored only in a local file on the developer's own
-computer. They are never transmitted to, or stored on, any third-party
-server. No database of user data is maintained.
+OAuth tokens, profile information and scheduled posts are stored in a
+database that runs only on the developer's own computer. This data is
+not stored on any server operated by a third party.
 </p>
 
 <h2>What we upload</h2>
 <p>
-The only content sent to TikTok is video files created entirely by the
-owner's own production process, published directly to the owner's own
-TikTok account via TikTok's Content Posting API.
+The only content sent to TikTok or YouTube is video content created by
+the owner, published to the owner's own account through each platform's
+official API (for TikTok, the Content Posting API).
 </p>
 
 <h2>Data sharing</h2>
 <p>
-We do not sell, rent, or share any data with third parties. The only
-external service this application communicates with is TikTok's own
-API, solely to publish the owner's content and check publish status.
+We do not sell, rent, or share any data with third parties. The
+application communicates only with the official APIs of the platforms
+the owner connects (TikTok and YouTube).
+</p>
+<p>
+Because the application runs on a local computer without its own public
+web address, the TikTok login redirect passes through a public redirect
+service (redirectmeto.com) to reach the local application. Only the
+one-time authorization code passes through that service. The code cannot
+be used without the application's client secret, which never leaves the
+developer's computer.
 </p>
 
 <h2>Data retention and deletion</h2>
 <p>
-Locally stored tokens can be deleted at any time by removing the token
-file from the local machine. Revoking access via TikTok's account
-settings immediately invalidates any stored token.
+Data is kept only for as long as the owner uses the application. All
+locally stored data, including tokens, can be removed at any time by
+deleting the local database. Revoking access in TikTok's or Google's
+account settings immediately invalidates any stored token.
 </p>
 
 <h2>Contact</h2>
@@ -75,8 +96,8 @@ details provided in the TikTok Developer Portal app listing.
 </p>
 
 <footer>
-This document applies to the "Tiny Craft Factory" TikTok API integration
-only.
+This document applies to the "Tiny Craft Factory" TikTok and YouTube API
+integrations only.
 </footer>
 
 </body>
